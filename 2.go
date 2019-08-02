@@ -65,7 +65,7 @@ func postService(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	r := mux.NewRouter()
-	r.HandleFunc("/countVowels", postService).Methods(http.MethodPost)
+	r.HandleFunc("/sortVowels", postService).Methods(http.MethodPost)
 
 	log.Printf("Starting http server at %v", ListeningPort)
 	err := http.ListenAndServe(ListeningPort, r)

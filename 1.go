@@ -26,9 +26,13 @@ func sortAlphabet(word string) {
 	sort.Strings(vowels)
 	sort.Strings(consonants)
 	vowels = append(vowels, consonants...)
-	fmt.Println(vowels)
+	stringVowels := strings.Join(vowels, "")
+	fmt.Printf("Hasil Sorting : %s", stringVowels)
 }
 
 func main() {
-	sortAlphabet("uuumjdaaambbama")
+	var kata string
+	fmt.Printf("Masukkan Kata : ")
+	fmt.Scanf("%s", &kata)
+	sortAlphabet(kata)
 }

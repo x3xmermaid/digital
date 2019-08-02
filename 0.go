@@ -5,8 +5,6 @@ import (
 	"strings"
 )
 
-// func getIndex()
-
 func RemoveIndex(s []string, index string) []string {
 	for i := 0; i < len(s); i++ {
 		if s[i] == index {
@@ -23,7 +21,6 @@ func countAlphabet(word string) {
 	total := 0
 
 	for i := 0; i < len(wordArray); i++ {
-		fmt.Println(wordArray[i])
 		for j := 0; j < len(vowelsArray); j++ {
 			if wordArray[i] == vowelsArray[j] {
 				totalVowels++
@@ -37,14 +34,16 @@ func countAlphabet(word string) {
 			} else if j == len(vowelsArray)-1 {
 				total++
 			}
-			fmt.Println(wordArray)
 		}
 	}
 
-	fmt.Println(totalVowels)
-	fmt.Println(total)
+	fmt.Printf("total Huruf Hidup : %d\n", totalVowels)
+	fmt.Printf("total Huruf Mati : %d", total)
 }
 
 func main() {
-	countAlphabet("uuumaaamama")
+	var kata string
+	fmt.Printf("Masukkan Kata : ")
+	fmt.Scanf("%s", &kata)
+	countAlphabet(kata)
 }

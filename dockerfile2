@@ -13,7 +13,6 @@ RUN apk update && \
 	
 RUN go get -d github.com/gorilla/mux
 
-
 RUN mkdir -p /go/src/cdigital
 COPY . /go/src/cdigital
 WORKDIR /go/src/cdigital
