@@ -14,19 +14,20 @@ Buat fungsi sederhana untuk mengurutkan abjad dari suatu kalimat, dengan memisah
 
 ### 2. Webservice
 
-* Method
-    "POST"
-    
-* Endpoint
-    "/sortVowels"
-    
-* Body
-    {
-	    "Text": "ueemamipop"
-    }
+untuk web service bisa menggunakan endpoint
+
+* localhost:8080/sortVowels
+
+dengan contoh body 
+
+{
+	"Text": "ueemamipop"
+}
     
     
 ### 3. Docker for no 2
 
 * `docker build -t cdigital .`
-* `docker run -p 1234:1234 -t cdigital`
+* `docker run -p 8080:8080 -t cdigital`
+
+gunakan localhost atau ip 192.168.99.100 jika menggunakan docker toolbox
